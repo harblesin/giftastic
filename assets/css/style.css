@@ -1,0 +1,12 @@
+body{
+    background-image: url("../images/back.jpg");
+}
+
+.buttons-display{
+    margin-top: 20px;
+}
+
+.btn{
+    margin-left: 10px;
+    margin-right: 10px;
+}
