@@ -13,7 +13,7 @@ $(document).ready(function () {
         $(".buttons-display").append(newButton);
     }
     
-    function makeButtons(){
+   function makeButtons(){
         $(".buttons-display").empty();
         for(var i = 0; i < movies.length; i++){
         var newButton = $("<button>");
@@ -21,11 +21,13 @@ $(document).ready(function () {
         newButton.attr("value", movies[i]);
         newButton.text(movies[i]);
         $(".buttons-display").append(newButton);
+        $("input").val("");
     }
    }
     
 
-    $(".add").click(function(){
+    $(".add").click(function(event){
+        event.preventDefault();
         var newSearch = $("input").val();
         movies.push(newSearch);
         makeButtons();
@@ -33,7 +35,7 @@ $(document).ready(function () {
         console.log(movies);
     })
 
-    $(".term").click(function(){
+    $(".term").click(".buttons-display", function(){
 
         var select = ($(this).val());
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + select + "&limit=10";
@@ -45,9 +47,9 @@ $(document).ready(function () {
         .then(function(res){
             
             console.log(res);
-           for(var j = 0; j < res.data.length; j++){
+           for(var j = 0; j < res.length; j++){
                 var content = $("<img>");
-                var rating = $("<p>").text("Rating: " + res.data[j].rating);
+                //var rating = $("<p>").text("Rating: " + res.data[j].rating);
                 console.log(res);
                 content.text(res.data)
                 content.attr("src", res.data[j].images.fixed_height.url);

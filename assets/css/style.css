@@ -2,6 +2,10 @@ body{
     background-image: url("../images/back.jpg");
 }
 
+p{
+    color:white;
+    text-shadow: -1px -1px 0 rgb(66, 8, 27);
+}
 .buttons-display{
     margin-top: 20px;
 }
