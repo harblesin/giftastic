@@ -4,8 +4,17 @@ body{
 
 p{
     color:white;
+    background-color: rgb(133, 27, 110);
+    border: 1px groove violet;
     text-shadow: -1px -1px 0 rgb(66, 8, 27);
+    max-width: 90px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    max-height: 200px;
+    margin-top: 22px;
 }
+
 .buttons-display{
     margin-top: 20px;
 }
@@ -13,4 +22,10 @@ p{
 .btn{
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.gif{
+    margin:20px;
+    border: 3px solid pink;4
 }
